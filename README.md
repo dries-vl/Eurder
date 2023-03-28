@@ -1,4 +1,4 @@
-![Order Logo](order.png)
+![Order Logo](overview/order.png)
 
 Örder is an innovative (not really) order management application. The front-end 
 will be a beautiful designed javascript-based application that will communicate with an even more 
@@ -168,4 +168,4 @@ Analyse which stories are impacted by this change, analyse how you will redesign
     
 ## Story map
 
-![Story map](Story_map_order.png)
+![Story map](overview/Story_map_order.png)
