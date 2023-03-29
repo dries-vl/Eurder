@@ -4,11 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="140616c4-2e6e-4500-9012-b2cfce78988e" name="Changes" comment="Refactored filestructure" />
+    <list default="true" id="140616c4-2e6e-4500-9012-b2cfce78988e" name="Changes" comment="Refactored filestructure">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/api/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/api/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/CustomerDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/CustomerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/DTO/AddressDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/DTO/CreateCustomerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/DTO/CustomerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/DTO/NameDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/LoggingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/api/ControllerExceptionHandlers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/CustomerAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/InvalidUserIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/UserAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/UserDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/domain/Authorization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/domain/Feature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/domain/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/service/AuthorizationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/service/InitDBService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/api/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/ItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/driesvl/eurder/customer/CustomerIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/driesvl/eurder/customer/repository/CustomerMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/driesvl/eurder/customer/repository/CustomerRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/driesvl/eurder/customer/service/CustomerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Record" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +79,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2NdNlG3GgZf3L5qF502cA6kUZii" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,26 +89,62 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.group.build",
+    "spring.configuration.checksum": "7f0c21669a712124b7ab3680ef96a115",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.driesvl.eurder.helper.service" />
+      <recent name="com.driesvl.eurder.helper.repository.domain" />
+      <recent name="com.driesvl.eurder.customer.repository" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\_development\eurder-local\backend" />
       <recent name="C:\_development\eurder-local\overview" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.driesvl.eurder.customer.repository" />
+      <recent name="com.driesvl.eurder.customer.service" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.EurderApplication">
+    <configuration name="CustomerMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eurder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.driesvl.eurder.customer.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.driesvl.eurder.customer.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.driesvl.eurder.customer.repository.CustomerMapperTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="eurder-local" />
       <method v="2">
@@ -76,6 +165,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CustomerMapperTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,7 +179,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679990148776</updated>
-      <workItem from="1679990150628" duration="322000" />
+      <workItem from="1679990150628" duration="23101000" />
+      <workItem from="1680074742151" duration="15896000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored filestructure">
       <created>1679990415303</created>
@@ -94,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679990415303</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactored filestructure">
+      <created>1679990644148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679990644148</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
