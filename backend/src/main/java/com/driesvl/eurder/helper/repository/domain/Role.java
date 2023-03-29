@@ -3,8 +3,8 @@ package com.driesvl.eurder.helper.repository.domain;
 import java.util.List;
 
 public enum Role {
-    CUSTOMER(List.of()),
-    ADMIN(List.of(Feature.GET_ALL_CUSTOMERS, Feature.GET_CUSTOMER));
+    CUSTOMER(List.of(Feature.PLACE_ORDER)),
+    ADMIN(List.of(Feature.GET_ALL_CUSTOMERS, Feature.GET_CUSTOMER, Feature.GET_ALL_ITEMS_BY_URGENCY, Feature.ADD_ITEM));
 
     private final List<Feature> featureList;
 

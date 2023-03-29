@@ -1,8 +1,8 @@
 package com.driesvl.eurder.helper.repository;
 
-import com.driesvl.eurder.exceptions.types.CustomerAlreadyExistsException;
+import com.driesvl.eurder.exceptions.types.AlreadyExistsException;
+import com.driesvl.eurder.exceptions.types.IdAlreadyTakenException;
 import com.driesvl.eurder.exceptions.types.InvalidUserIdException;
-import com.driesvl.eurder.exceptions.types.UserAlreadyExistsException;
 import com.driesvl.eurder.helper.repository.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -34,9 +34,9 @@ public class UserRepository {
                 .findFirst();
     }
 
-    public User getUserById(UUID uuid) {
-        throwIfUserNotFound(uuid);
-        return getUserDB().get(uuid);
+    public User getUserById(UUID id) {
+        throwIfNonExistingId(id);
+        return getUserDB().get(id);
     }
 
     public List<User> getAllUsers() {
@@ -47,20 +47,21 @@ public class UserRepository {
         return this.userDB.getUserDB();
     }
 
-    private void throwIfUserNotFound(UUID uuid) {
-        if (!getUserDB().containsKey(uuid)) {
-            throw new InvalidUserIdException(this.getClass().getSimpleName(), "User not found");
+    private void throwIfNonExistingId(UUID id) {
+        if (!getUserDB().containsKey(id)) {
+            throw new InvalidUserIdException(this.getClass().getSimpleName(), "Id does not exist");
         }
     }
-    private void throwIfIdAlreadyTaken(UUID uuid) {
-        if (getUserDB().containsKey(uuid)) {
-            throw new CustomerAlreadyExistsException(this.getClass().getSimpleName(), "Id already exists");
+
+    private void throwIfIdAlreadyTaken(UUID id) {
+        if (getUserDB().containsKey(id)) {
+            throw new IdAlreadyTakenException(this.getClass().getSimpleName(), "Id already taken");
         }
     }
 
     private void throwIfUserAlreadyExists(String email) {
         if (emailExists(email)) {
-            throw new UserAlreadyExistsException(this.getClass().getSimpleName(), "User with this email already exists");
+            throw new AlreadyExistsException(this.getClass().getSimpleName(), "User with this email already exists");
         }
     }
 

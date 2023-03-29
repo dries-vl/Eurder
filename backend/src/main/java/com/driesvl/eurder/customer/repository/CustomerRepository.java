@@ -1,7 +1,7 @@
 package com.driesvl.eurder.customer.repository;
 
 import com.driesvl.eurder.customer.repository.domain.Customer;
-import com.driesvl.eurder.exceptions.types.CustomerAlreadyExistsException;
+import com.driesvl.eurder.exceptions.types.IdAlreadyTakenException;
 import com.driesvl.eurder.exceptions.types.InvalidUserIdException;
 import com.driesvl.eurder.helper.repository.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +33,14 @@ public class CustomerRepository {
         return getCustomerDB().values().stream().toList();
     }
 
-    private void throwIfCustomerNotFound(User user) throws CustomerAlreadyExistsException {
+    private void throwIfCustomerNotFound(User user) throws IdAlreadyTakenException {
         if (!getCustomerDB().containsKey(user)) {
             throw new InvalidUserIdException(this.getClass().getSimpleName(), "Customer not found");
         }
     }
-    private void throwIfUserAlreadyExists(User user) throws CustomerAlreadyExistsException {
+    private void throwIfUserAlreadyExists(User user) throws IdAlreadyTakenException {
         if (getCustomerDB().containsKey(user)) {
-            throw new CustomerAlreadyExistsException(this.getClass().getSimpleName(), "User already used for another customer account");
+            throw new IdAlreadyTakenException(this.getClass().getSimpleName(), "User already used for another customer account");
         }
     }
 

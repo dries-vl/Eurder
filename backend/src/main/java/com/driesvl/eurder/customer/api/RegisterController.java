@@ -1,6 +1,6 @@
 package com.driesvl.eurder.customer.api;
 
-import com.driesvl.eurder.customer.repository.domain.DTO.CreateCustomerDTO;
+import com.driesvl.eurder.customer.repository.domain.dto.CreateCustomerDTO;
 import com.driesvl.eurder.customer.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

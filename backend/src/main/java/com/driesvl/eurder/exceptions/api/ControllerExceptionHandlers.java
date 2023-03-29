@@ -1,6 +1,7 @@
 package com.driesvl.eurder.exceptions.api;
 
-import com.driesvl.eurder.exceptions.types.CustomerAlreadyExistsException;
+import com.driesvl.eurder.exceptions.types.AlreadyExistsException;
+import com.driesvl.eurder.exceptions.types.IdAlreadyTakenException;
 import com.driesvl.eurder.exceptions.types.InvalidUserIdException;
 import com.driesvl.eurder.exceptions.types.UnauthorizedException;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,14 +13,19 @@ import java.io.IOException;
 
 @ControllerAdvice
 public class ControllerExceptionHandlers {
-    @ExceptionHandler(CustomerAlreadyExistsException.class)
-    public void badRequest(CustomerAlreadyExistsException exception, HttpServletResponse response) throws IOException {
-        response.sendError(HttpStatus.BAD_REQUEST.value(), exception.getMessage());
+    @ExceptionHandler(IdAlreadyTakenException.class)
+    public void somehowIdenticalId(IdAlreadyTakenException exception, HttpServletResponse response) throws IOException {
+        response.sendError(HttpStatus.I_AM_A_TEAPOT.value(), exception.getMessage() + " SHOULD NEVER HAPPEN");
+    }
+
+    @ExceptionHandler(AlreadyExistsException.class)
+    public void badRequest(AlreadyExistsException exception, HttpServletResponse response) throws IOException {
+        response.sendError(HttpStatus.ALREADY_REPORTED.value(), exception.getMessage());
     }
 
     @ExceptionHandler(InvalidUserIdException.class)
     public void badId(InvalidUserIdException exception, HttpServletResponse response) throws IOException {
-        response.sendError(HttpStatus.I_AM_A_TEAPOT.value(), exception.getMessage());
+        response.sendError(HttpStatus.BAD_REQUEST.value(), exception.getMessage());
     }
 
     @ExceptionHandler(UnauthorizedException.class)

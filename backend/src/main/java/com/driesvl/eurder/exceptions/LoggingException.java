@@ -1,6 +1,6 @@
 package com.driesvl.eurder.exceptions;
 
-import com.driesvl.eurder.exceptions.types.CustomerAlreadyExistsException;
+import com.driesvl.eurder.exceptions.types.IdAlreadyTakenException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +11,7 @@ public class LoggingException extends RuntimeException {
     }
 
     private void logException(String logMessage) {
-        Logger logger = LoggerFactory.getLogger(CustomerAlreadyExistsException.class);
+        Logger logger = LoggerFactory.getLogger(IdAlreadyTakenException.class);
         logger.warn(logMessage);
     }
 }

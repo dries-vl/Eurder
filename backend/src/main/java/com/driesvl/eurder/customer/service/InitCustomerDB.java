@@ -1,13 +1,12 @@
-package com.driesvl.eurder.helper.service;
+package com.driesvl.eurder.customer.service;
 
-import com.driesvl.eurder.customer.repository.domain.DTO.AddressDTO;
-import com.driesvl.eurder.customer.repository.domain.DTO.CreateCustomerDTO;
-import com.driesvl.eurder.customer.service.CustomerService;
+import com.driesvl.eurder.customer.repository.domain.dto.AddressDTO;
+import com.driesvl.eurder.customer.repository.domain.dto.CreateCustomerDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class InitDBService {
+public class InitCustomerDB {
     private static final CreateCustomerDTO CUSTOMER_1 = new CreateCustomerDTO(
             "gertje@gmail.com", "pwd",
             "Gert", "Verhulst",
@@ -23,7 +22,7 @@ public class InitDBService {
     private final CustomerService customerService;
 
     @Autowired
-    public InitDBService(CustomerService customerService) {
+    public InitCustomerDB(CustomerService customerService) {
         this.customerService = customerService;
         initDB();
     }
