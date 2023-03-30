@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'cd backend'
                 sh 'mvn clean install -DskipTests'
             }
         }
