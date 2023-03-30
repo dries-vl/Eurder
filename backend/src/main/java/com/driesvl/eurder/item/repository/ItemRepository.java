@@ -26,6 +26,12 @@ public class ItemRepository {
         getItemDB().put(item.getId(), item);
     }
 
+    public void reduceItemAmount(UUID id, int amountToReduce) {
+        throwIfNonExistingId(id);
+        long amountInStock = getItemDB().get(id).getAmount();
+        getItemDB().get(id).setAmount(amountInStock - amountToReduce);
+    }
+
     public Item getItem(UUID id) {
         throwIfNonExistingId(id);
         return getItemDB().get(id);

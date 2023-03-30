@@ -4,34 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="140616c4-2e6e-4500-9012-b2cfce78988e" name="Changes" comment="Added endpoints for customer, register. Added security, exceptions and logging">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/ItemDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/ItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/dto/CreateItemDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/dto/ItemDTO.java" afterDir="false" />
+    <list default="true" id="140616c4-2e6e-4500-9012-b2cfce78988e" name="Changes" comment="Add validation and placing orders">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/StockIsBeyondDepletedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/api/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/OrderDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/ItemGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/CreateOrderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/ItemGroupDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/OrderReportDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/api/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/api/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/api/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/api/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/CustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/DTO/AddressDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/AddressDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/DTO/CreateCustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/CreateCustomerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/DTO/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/CustomerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/DTO/NameDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/NameDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/LoggingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/LoggingException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/AddressDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/AddressDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/CreateCustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/CreateCustomerDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/api/ControllerExceptionHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/api/ControllerExceptionHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/CustomerAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/IdAlreadyTakenException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/UserAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/AlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/domain/Feature.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/domain/Feature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/repository/domain/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/helper/service/InitDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/service/InitCustomerDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/api/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/api/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/driesvl/eurder/customer/repository/CustomerMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/driesvl/eurder/customer/repository/CustomerMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/dto/CreateItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/dto/CreateItemDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679990148776</updated>
       <workItem from="1679990150628" duration="23101000" />
-      <workItem from="1680074742151" duration="23658000" />
+      <workItem from="1680074742151" duration="43656000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored filestructure">
       <created>1679990415303</created>
@@ -194,7 +188,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680093892943</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added item endpoint and refactored a lot">
+      <created>1680102907663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680102907663</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Move Jenkinsfile">
+      <created>1680166881349</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680166881349</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update Jenkinsfile">
+      <created>1680167559788</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680167559788</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +229,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactored filestructure" />
     <MESSAGE value="Added endpoints for customer, register. Added security, exceptions and logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added endpoints for customer, register. Added security, exceptions and logging" />
+    <MESSAGE value="Added item endpoint and refactored a lot" />
+    <MESSAGE value="Move Jenkinsfile" />
+    <MESSAGE value="Update Jenkinsfile" />
+    <MESSAGE value="Add validation and placing orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add validation and placing orders" />
   </component>
 </project>
