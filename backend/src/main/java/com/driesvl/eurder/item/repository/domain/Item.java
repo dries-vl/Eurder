@@ -18,6 +18,18 @@ public class Item {
         this.amount = amount;
     }
 
+    private Item(UUID id, String name, String description, double price, long amount) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.amount = amount;
+    }
+
+    public static Item createItemWithExistingId(UUID id, String name, String description, double price, long amount) {
+        return new Item(id, name, description, price, amount);
+    }
+
     public void setAmount(long amount) {
         this.amount = amount;
     }

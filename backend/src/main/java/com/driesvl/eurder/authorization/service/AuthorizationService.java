@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Base64;
+import java.util.UUID;
 
 @Service
 public class AuthorizationService {
@@ -19,11 +20,12 @@ public class AuthorizationService {
         this.userRepository = userRepository;
     }
 
-    public void validateAuthorization(String encodedAuthorization, Feature feature) {
+    public UUID validateAuthorization(String encodedAuthorization, Feature feature) {
         Authorization authorization = decodeUserAuthorization(encodedAuthorization);
         User user = getAndVerifyUserExists(authorization.email());
         verifyUserPasswordIsCorrect(user, authorization);
         verifyUserHasAccessToFeature(user.getRole(), feature);
+        return user.getId();
     }
 
     private User getAndVerifyUserExists(String email) {
