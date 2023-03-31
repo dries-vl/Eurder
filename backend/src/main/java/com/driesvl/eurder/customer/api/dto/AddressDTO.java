@@ -1,4 +1,4 @@
-package com.driesvl.eurder.customer.repository.domain.dto;
+package com.driesvl.eurder.customer.api.dto;
 
 import jakarta.validation.constraints.NotBlank;
 

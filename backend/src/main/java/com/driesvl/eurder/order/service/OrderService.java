@@ -2,12 +2,11 @@ package com.driesvl.eurder.order.service;
 
 import com.driesvl.eurder.item.repository.ItemRepository;
 import com.driesvl.eurder.item.repository.domain.Item;
-import com.driesvl.eurder.order.repository.OrderMapper;
 import com.driesvl.eurder.order.repository.OrderRepository;
 import com.driesvl.eurder.order.repository.domain.ItemGroup;
 import com.driesvl.eurder.order.repository.domain.Order;
-import com.driesvl.eurder.order.repository.domain.dto.CreateOrderDTO;
-import com.driesvl.eurder.order.repository.domain.dto.OrderDTO;
+import com.driesvl.eurder.order.api.dto.CreateOrderDTO;
+import com.driesvl.eurder.order.api.dto.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,15 +26,15 @@ public class OrderService {
         this.orderMapper = orderMapper;
     }
 
-    public OrderDTO addOrder(CreateOrderDTO createOrderDTO) {
-        Order order = createOrder(createOrderDTO);
+    public OrderDTO addOrder(UUID userId, CreateOrderDTO createOrderDTO) {
+        Order order = createOrder(userId, createOrderDTO);
         orderRepository.addOrder(order);
         takeItemsFromStock(order);
         return orderMapper.toResultDTO(order, calculateOrderTotalPrice(order));
     }
 
-    private Order createOrder(CreateOrderDTO createOrderDTO) {
-        return new Order(createOrderDTO.customerId(), createOrderDTO.items()
+    private Order createOrder(UUID userId, CreateOrderDTO createOrderDTO) {
+        return new Order(userId, createOrderDTO.items()
                 .entrySet()
                 .stream()
                 .map(entry -> createItemGroup(entry.getKey(), entry.getValue()))

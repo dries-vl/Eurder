@@ -1,8 +1,8 @@
-package com.driesvl.eurder.item.repository;
+package com.driesvl.eurder.item.service;
 
 import com.driesvl.eurder.item.repository.domain.Item;
-import com.driesvl.eurder.item.repository.domain.dto.CreateItemDTO;
-import com.driesvl.eurder.item.repository.domain.dto.ItemDTO;
+import com.driesvl.eurder.item.api.dto.CreateItemDTO;
+import com.driesvl.eurder.item.api.dto.ItemDTO;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

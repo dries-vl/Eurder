@@ -1,10 +1,9 @@
 package com.driesvl.eurder.customer.service;
 
-import com.driesvl.eurder.customer.repository.CustomerMapper;
 import com.driesvl.eurder.customer.repository.CustomerRepository;
 import com.driesvl.eurder.customer.repository.domain.Customer;
-import com.driesvl.eurder.customer.repository.domain.dto.CreateCustomerDTO;
-import com.driesvl.eurder.customer.repository.domain.dto.CustomerDTO;
+import com.driesvl.eurder.customer.api.dto.CreateCustomerDTO;
+import com.driesvl.eurder.customer.api.dto.CustomerDTO;
 import com.driesvl.eurder.exceptions.types.AlreadyExistsException;
 import com.driesvl.eurder.authorization.repository.UserRepository;
 import com.driesvl.eurder.authorization.repository.domain.Role;

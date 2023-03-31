@@ -1,4 +1,4 @@
-package com.driesvl.eurder.order.repository.domain.dto;
+package com.driesvl.eurder.order.api.dto;
 
 import java.util.List;
 

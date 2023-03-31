@@ -1,11 +1,15 @@
 package com.driesvl.eurder.customer.repository;
 
+import com.driesvl.eurder.customer.api.dto.AddressDTO;
+import com.driesvl.eurder.customer.api.dto.CreateCustomerDTO;
+import com.driesvl.eurder.customer.api.dto.CustomerDTO;
+import com.driesvl.eurder.customer.api.dto.NameDTO;
 import com.driesvl.eurder.customer.repository.domain.Address;
 import com.driesvl.eurder.customer.repository.domain.Customer;
-import com.driesvl.eurder.customer.repository.domain.dto.*;
 import com.driesvl.eurder.customer.repository.domain.Name;
 import com.driesvl.eurder.authorization.repository.domain.Role;
 import com.driesvl.eurder.authorization.repository.domain.User;
+import com.driesvl.eurder.customer.service.CustomerMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

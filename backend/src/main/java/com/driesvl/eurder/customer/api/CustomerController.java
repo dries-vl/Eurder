@@ -1,6 +1,6 @@
 package com.driesvl.eurder.customer.api;
 
-import com.driesvl.eurder.customer.repository.domain.dto.CustomerDTO;
+import com.driesvl.eurder.customer.api.dto.CustomerDTO;
 import com.driesvl.eurder.customer.service.CustomerService;
 import com.driesvl.eurder.authorization.repository.domain.Feature;
 import com.driesvl.eurder.authorization.service.AuthorizationService;

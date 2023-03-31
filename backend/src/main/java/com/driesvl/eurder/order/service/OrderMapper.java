@@ -1,11 +1,11 @@
-package com.driesvl.eurder.order.repository;
+package com.driesvl.eurder.order.service;
 
 import com.driesvl.eurder.order.repository.domain.ItemGroup;
 import com.driesvl.eurder.order.repository.domain.Order;
-import com.driesvl.eurder.order.repository.domain.dto.ItemGroupDTO;
-import com.driesvl.eurder.order.repository.domain.dto.ReportItemGroupDTO;
-import com.driesvl.eurder.order.repository.domain.dto.ReportOrderDTO;
-import com.driesvl.eurder.order.repository.domain.dto.OrderDTO;
+import com.driesvl.eurder.order.api.dto.ItemGroupDTO;
+import com.driesvl.eurder.order.api.dto.ReportItemGroupDTO;
+import com.driesvl.eurder.order.api.dto.ReportOrderDTO;
+import com.driesvl.eurder.order.api.dto.OrderDTO;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,10 +1,9 @@
 package com.driesvl.eurder.item.service;
 
-import com.driesvl.eurder.item.repository.ItemMapper;
 import com.driesvl.eurder.item.repository.ItemRepository;
 import com.driesvl.eurder.item.repository.domain.Item;
-import com.driesvl.eurder.item.repository.domain.dto.CreateItemDTO;
-import com.driesvl.eurder.item.repository.domain.dto.ItemDTO;
+import com.driesvl.eurder.item.api.dto.CreateItemDTO;
+import com.driesvl.eurder.item.api.dto.ItemDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

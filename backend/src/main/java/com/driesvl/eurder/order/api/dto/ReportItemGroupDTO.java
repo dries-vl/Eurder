@@ -1,4 +1,4 @@
-package com.driesvl.eurder.order.repository.domain.dto;
+package com.driesvl.eurder.order.api.dto;
 
 public record ReportItemGroupDTO(String item, double price, long amount) {
 }
