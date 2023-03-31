@@ -1,7 +1,7 @@
 package com.driesvl.eurder.order.api;
 
-import com.driesvl.eurder.helper.repository.domain.Feature;
-import com.driesvl.eurder.helper.service.AuthorizationService;
+import com.driesvl.eurder.authorization.repository.domain.Feature;
+import com.driesvl.eurder.authorization.service.AuthorizationService;
 import com.driesvl.eurder.order.repository.domain.dto.CreateOrderDTO;
 import com.driesvl.eurder.order.repository.domain.dto.OrderDTO;
 import com.driesvl.eurder.order.service.OrderService;

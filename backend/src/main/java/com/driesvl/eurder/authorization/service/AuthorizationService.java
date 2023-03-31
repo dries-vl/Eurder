@@ -1,11 +1,11 @@
-package com.driesvl.eurder.helper.service;
+package com.driesvl.eurder.authorization.service;
 
 import com.driesvl.eurder.exceptions.types.UnauthorizedException;
-import com.driesvl.eurder.helper.repository.UserRepository;
-import com.driesvl.eurder.helper.repository.domain.Authorization;
-import com.driesvl.eurder.helper.repository.domain.Feature;
-import com.driesvl.eurder.helper.repository.domain.Role;
-import com.driesvl.eurder.helper.repository.domain.User;
+import com.driesvl.eurder.authorization.repository.UserRepository;
+import com.driesvl.eurder.authorization.repository.domain.Authorization;
+import com.driesvl.eurder.authorization.repository.domain.Feature;
+import com.driesvl.eurder.authorization.repository.domain.Role;
+import com.driesvl.eurder.authorization.repository.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

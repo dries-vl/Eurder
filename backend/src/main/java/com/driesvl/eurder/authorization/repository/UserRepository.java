@@ -1,9 +1,9 @@
-package com.driesvl.eurder.helper.repository;
+package com.driesvl.eurder.authorization.repository;
 
 import com.driesvl.eurder.exceptions.types.AlreadyExistsException;
 import com.driesvl.eurder.exceptions.types.IdAlreadyTakenException;
 import com.driesvl.eurder.exceptions.types.InvalidUserIdException;
-import com.driesvl.eurder.helper.repository.domain.User;
+import com.driesvl.eurder.authorization.repository.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

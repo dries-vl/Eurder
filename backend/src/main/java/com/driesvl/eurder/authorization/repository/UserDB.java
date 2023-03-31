@@ -1,7 +1,7 @@
-package com.driesvl.eurder.helper.repository;
+package com.driesvl.eurder.authorization.repository;
 
-import com.driesvl.eurder.helper.repository.domain.Role;
-import com.driesvl.eurder.helper.repository.domain.User;
+import com.driesvl.eurder.authorization.repository.domain.Role;
+import com.driesvl.eurder.authorization.repository.domain.User;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

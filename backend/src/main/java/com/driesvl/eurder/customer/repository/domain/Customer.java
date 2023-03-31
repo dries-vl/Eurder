@@ -1,6 +1,6 @@
 package com.driesvl.eurder.customer.repository.domain;
 
-import com.driesvl.eurder.helper.repository.domain.User;
+import com.driesvl.eurder.authorization.repository.domain.User;
 
 import java.util.Objects;
 

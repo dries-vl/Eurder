@@ -1,7 +1,7 @@
 package com.driesvl.eurder.item.api;
 
-import com.driesvl.eurder.helper.repository.domain.Feature;
-import com.driesvl.eurder.helper.service.AuthorizationService;
+import com.driesvl.eurder.authorization.repository.domain.Feature;
+import com.driesvl.eurder.authorization.service.AuthorizationService;
 import com.driesvl.eurder.item.repository.domain.dto.CreateItemDTO;
 import com.driesvl.eurder.item.repository.domain.dto.ItemDTO;
 import com.driesvl.eurder.item.service.ItemService;

@@ -1,7 +1,7 @@
 package com.driesvl.eurder.customer.repository;
 
 import com.driesvl.eurder.customer.repository.domain.Customer;
-import com.driesvl.eurder.helper.repository.domain.User;
+import com.driesvl.eurder.authorization.repository.domain.User;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;

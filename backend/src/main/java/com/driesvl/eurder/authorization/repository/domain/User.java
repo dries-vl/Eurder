@@ -1,4 +1,4 @@
-package com.driesvl.eurder.helper.repository.domain;
+package com.driesvl.eurder.authorization.repository.domain;
 
 import java.util.Objects;
 import java.util.UUID;
