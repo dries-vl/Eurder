@@ -7,6 +7,7 @@ import com.driesvl.eurder.order.repository.OrderRepository;
 import com.driesvl.eurder.order.repository.domain.ItemGroup;
 import com.driesvl.eurder.order.repository.domain.Order;
 import com.driesvl.eurder.order.repository.domain.dto.CreateOrderDTO;
+import com.driesvl.eurder.order.repository.domain.dto.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,11 +27,11 @@ public class OrderService {
         this.orderMapper = orderMapper;
     }
 
-    public double addOrder(CreateOrderDTO createOrderDTO) {
+    public OrderDTO addOrder(CreateOrderDTO createOrderDTO) {
         Order order = createOrder(createOrderDTO);
         orderRepository.addOrder(order);
         takeItemsFromStock(order);
-        return calculateOrderTotalPrice(order);
+        return orderMapper.toResultDTO(order, calculateOrderTotalPrice(order));
     }
 
     private Order createOrder(CreateOrderDTO createOrderDTO) {
@@ -48,7 +49,7 @@ public class OrderService {
 
     private ItemGroup createItemGroup(UUID itemId, int amountOrdered) {
         Item item = itemRepository.getItem(itemId);
-        return new ItemGroup(itemId, item.getPrice(), amountOrdered, calculateShippingDate(item, amountOrdered));
+        return new ItemGroup(itemId, item.getName(), item.getPrice(), amountOrdered, calculateShippingDate(item, amountOrdered));
     }
 
     private LocalDate calculateShippingDate(Item item, int amountOrdered) {

@@ -5,27 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="140616c4-2e6e-4500-9012-b2cfce78988e" name="Changes" comment="Add validation and placing orders">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/types/StockIsBeyondDepletedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/api/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/OrderDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/ItemGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/CreateOrderDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/ItemGroupDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/OrderReportDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/OrderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/ReportItemGroupDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/ReportOrderDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/api/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/api/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/AddressDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/AddressDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/CreateCustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/customer/repository/domain/dto/CreateCustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/api/ControllerExceptionHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/exceptions/api/ControllerExceptionHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/dto/CreateItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/item/repository/domain/dto/CreateItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/api/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/api/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/ItemGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/ItemGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/ItemGroupDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/ItemGroupDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/repository/domain/dto/OrderReportDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/driesvl/eurder/order/service/OrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +28,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -100,6 +91,7 @@
       <recent name="com.driesvl.eurder.customer.repository" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\_development\eurder-local\" />
       <recent name="C:\_development\eurder-local\backend" />
       <recent name="C:\_development\eurder-local\overview" />
     </key>
@@ -165,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679990148776</updated>
       <workItem from="1679990150628" duration="23101000" />
-      <workItem from="1680074742151" duration="43656000" />
+      <workItem from="1680074742151" duration="49438000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored filestructure">
       <created>1679990415303</created>
@@ -209,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680167559788</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add validation and placing orders">
+      <created>1680185537870</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680185537870</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

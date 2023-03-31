@@ -5,12 +5,14 @@ import java.util.UUID;
 
 public class ItemGroup {
     private final UUID itemId;
+    private final String itemName;
     private final double priceAtTimeOfPurchase;
     private final int amount;
     private final LocalDate shippingDate;
 
-    public ItemGroup(UUID itemId, double priceAtTimeOfPurchase, int amount, LocalDate shippingDate) {
+    public ItemGroup(UUID itemId, String itemName, double priceAtTimeOfPurchase, int amount, LocalDate shippingDate) {
         this.itemId = itemId;
+        this.itemName = itemName;
         this.priceAtTimeOfPurchase = priceAtTimeOfPurchase;
         this.amount = amount;
         this.shippingDate = shippingDate;
@@ -30,5 +32,9 @@ public class ItemGroup {
 
     public LocalDate getShippingDate() {
         return shippingDate;
+    }
+
+    public String getItemName() {
+        return itemName;
     }
 }

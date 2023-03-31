@@ -1,11 +1,12 @@
 package com.driesvl.eurder.exceptions.api;
 
-import com.driesvl.eurder.exceptions.types.*;
+import com.driesvl.eurder.exceptions.types.AlreadyExistsException;
+import com.driesvl.eurder.exceptions.types.IdAlreadyTakenException;
+import com.driesvl.eurder.exceptions.types.InvalidUserIdException;
+import com.driesvl.eurder.exceptions.types.UnauthorizedException;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.validation.ValidationException;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -21,7 +22,8 @@ public class ControllerExceptionHandlers {
     @ResponseBody
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public List<String> handleValidationExceptions(MethodArgumentNotValidException e) {
-        return e.getBindingResult().getFieldErrors()
+        return e.getBindingResult()
+                .getFieldErrors()
                 .stream()
                 .map(DefaultMessageSourceResolvable::getDefaultMessage)
                 .toList();

@@ -9,12 +9,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install -DskipTests'
+                sh 'mvn -f backend/pom.xml clean install -DskipTests'
             }
         }
         stage('Test-Stage') {
             steps {
-                sh 'mvn test'
+                sh 'mvn -f backend/pom.xml test'
             }
         }
     }
