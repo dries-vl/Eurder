@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -f backend/pom.xml clean install -DskipTests'
+                sh 'mvn -f backend/pom.xml clean install -DskipTests -Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS=true'
             }
         }
         stage('Test-Stage') {
